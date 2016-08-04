@@ -46,8 +46,6 @@
         [self.CM cancelPeripheralConnection:connectPeripheral];
         NSLog(@"disconnect-1");
     }
-    
-    
 }
 
 #pragma mark - CBCentralManager delegate
@@ -104,7 +102,6 @@
         [self.CM connectPeripheral:peripheral options:nil];
         NSLog(@"connect to %@",peripheral.name);
     }
-    
 }
 
 
