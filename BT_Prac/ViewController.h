@@ -12,6 +12,8 @@
 
 @interface ViewController : UIViewController
 @property (strong,nonatomic)CBCentralManager *CM;
+@property (weak, nonatomic) IBOutlet UILabel *rssiLable;
+@property (weak, nonatomic) IBOutlet UILabel *localNameLabel;
 
 @end
 

@@ -91,6 +91,10 @@
     NSString *localName = [advertisementData objectForKey:CBAdvertisementDataLocalNameKey];
     
     NSLog(@"localName:%@",localName);
+    
+    self.rssiLable.text=[NSString stringWithFormat:@"RSSI:%@",RSSI];
+    self.localNameLabel.text=[NSString stringWithFormat:@"Name:%@",localName];
+    
     //if ([peripheral.name length] && [peripheral.name rangeOfString:@"DannySimpleBLE"].location != NSNotFound) {
     if ([localName length] && [localName rangeOfString:@""].location != NSNotFound) {
         //抓到週邊後就立即停止 Scan

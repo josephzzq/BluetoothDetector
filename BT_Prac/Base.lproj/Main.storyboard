@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,32 +17,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyS-MI-ikh">
-                                <rect key="frame" x="237" y="173" width="124" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyS-MI-ikh">
+                                <rect key="frame" x="238" y="251" width="124" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Scan and connect"/>
                                 <connections>
                                     <action selector="scanAndConnect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ybo-b0-6dQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sL6-ho-dkq">
-                                <rect key="frame" x="230" y="275" width="142" height="30"/>
+                                <rect key="frame" x="230" y="318" width="142" height="30"/>
                                 <state key="normal" title="Stop and disconnect"/>
                                 <connections>
                                     <action selector="stopAndDisconnect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1oo-5N-mNc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RSSI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zxj-Ss-SMD">
+                                <rect key="frame" x="282" y="91" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDx-7E-pgg">
+                                <rect key="frame" x="279" y="148" width="42.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="sL6-ho-dkq" firstAttribute="leading" secondItem="tyS-MI-ikh" secondAttribute="leading" constant="-8" id="0sB-Ym-TBB"/>
+                            <constraint firstItem="tyS-MI-ikh" firstAttribute="top" secondItem="ZDx-7E-pgg" secondAttribute="bottom" constant="82" id="7Bb-cD-JUw"/>
+                            <constraint firstItem="ZDx-7E-pgg" firstAttribute="top" secondItem="Zxj-Ss-SMD" secondAttribute="bottom" constant="36" id="Maf-XT-XEO"/>
                             <constraint firstItem="tyS-MI-ikh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SzD-Yy-Kld"/>
-                            <constraint firstItem="tyS-MI-ikh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-112" id="heN-8A-Zn9"/>
-                            <constraint firstItem="sL6-ho-dkq" firstAttribute="top" secondItem="tyS-MI-ikh" secondAttribute="bottom" constant="72" id="za3-ho-fOT"/>
+                            <constraint firstItem="tyS-MI-ikh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-34" id="heN-8A-Zn9"/>
+                            <constraint firstItem="ZDx-7E-pgg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p0C-rQ-gom"/>
+                            <constraint firstItem="Zxj-Ss-SMD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="71" id="ssv-Mp-U3l"/>
+                            <constraint firstItem="Zxj-Ss-SMD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zPx-o2-Nyb"/>
+                            <constraint firstItem="sL6-ho-dkq" firstAttribute="top" secondItem="tyS-MI-ikh" secondAttribute="bottom" constant="37" id="za3-ho-fOT"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ssv-Mp-U3l"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="localNameLabel" destination="ZDx-7E-pgg" id="wsT-OV-oUg"/>
+                        <outlet property="rssiLable" destination="Zxj-Ss-SMD" id="7LY-dl-46q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="324" y="248"/>
         </scene>
     </scenes>
 </document>
